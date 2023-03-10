@@ -1,0 +1,2 @@
+class Rice < ApplicationRecord
+end

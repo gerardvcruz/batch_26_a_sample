@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Rice</h1>
+
+<div id="rice">
+  <% @rice.each do |rice| %>
+    <%= render(rice) %> <!-- rendering a partial _rice.html.erb -->
+    <p>
+      <%= link_to "Show this rice", rice %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New rice", new_rice_path %>
+  

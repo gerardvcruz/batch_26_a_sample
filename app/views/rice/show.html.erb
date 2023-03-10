@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rice %>
+
+<div>
+  <%= link_to "Edit this rice", edit_rice_path(@rice) %> |
+  <%= link_to "Back to rice", rice_index_path %>
+
+  <%= button_to "Destroy this rice", @rice, method: :delete %>
+</div>
