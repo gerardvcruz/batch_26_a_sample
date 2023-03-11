@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Potatos</h1>
+
+<%= link_to("New potato", potatos_new_path) %>
+
+<div id="potato">
+  <% @potatos.each do |potato| %>
+    <%= render("potato", potato: potato) %>
+  <% end %>
+</div>
+  

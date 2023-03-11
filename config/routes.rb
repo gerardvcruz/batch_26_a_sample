@@ -3,14 +3,15 @@ Rails.application.routes.draw do
   # get 'rice' => 'rice#index'
   # get 'rice/:id' => 'rice#show'
 
-  # resources(:potatoes)
+  # resources(:potatos)
   
-  get 'potatoes' => 'potatoes#index'
-  get 'potatoes/:id' => 'potatoes#show'
-  get 'potatoes/:id/edit' => 'potatoes#edit'
-  post 'potatoes' => 'potatoes#create'
-  put 'potatoes/:id' => 'potatoes#update'
-  delete 'potatoes/:id' => 'potatoes#delete'
+  get 'potatos' => 'potatos#index'
+  get 'potatos/new' => 'potatos#new'
+  get 'potatos/:id' => 'potatos#show'
+  get 'potatos/:id/edit' => 'potatos#edit'
+  post 'potatos' => 'potatos#create'
+  put 'potatos/:id' => 'potatos#update'
+  delete 'potatos/:id' => 'potatos#delete'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

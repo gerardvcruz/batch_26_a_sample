@@ -22,7 +22,6 @@ class RiceController < ApplicationController
 
   # POST /rice or /rice.json
   def create
-    puts params
     @rice = Rice.new(rice_params)
 
     respond_to do |format|
