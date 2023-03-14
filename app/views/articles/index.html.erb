@@ -10,6 +10,7 @@
 
   <tbody>
     <% @articles.each do |article| %>
+      <% binding.pry %>
       <tr>
         <td><%= article.id %></td>
         <td><%= article.name %></td>
