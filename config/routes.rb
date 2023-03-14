@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resources(:rice)
+  resources(:rice)
   # get 'rice' => 'rice#index'
   # get 'rice/:id' => 'rice#show'
 
@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   # put 'potatos/:id' => 'potatos#update'
   # delete 'potatos/:id' => 'potatos#delete'
 
+  get '/categories' => 'categories#index'
+  get '/categories/new' => 'categories#new', as: 'categories_new'
 
   get '/articles' => 'articles#index'
-  get '/articles/new' => 'articles#new', as: 'new_article'
-  post '/articles' => 'articles#create', as: 'create_article' 
+  get '/articles/new' => 'articles#new'
+  post '/articles' => 'articles#create'
 end
