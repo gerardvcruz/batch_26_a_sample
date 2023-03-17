@@ -1,5 +1,4 @@
-<%= form_with scope: :article, url: create_article_path, local: true do |f| %>
-
+<%= form_with model: @article, local: true do |f| %>
   <p>
     <% if @article.errors.any? %>
       <ul>
