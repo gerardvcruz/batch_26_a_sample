@@ -1,0 +1,7 @@
+<%= form_with(scope: :user, url: signin_path, local: true) do |form| %>
+  <%= form.label "Email" %>
+  <%= form.text_field  :email %>
+  <%= form.label "Password" %>
+  <%= form.password_field :password %>
+  <%= form.submit "Sign In" %>
+<% end %>

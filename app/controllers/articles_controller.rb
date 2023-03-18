@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @articles = Article.all
   end 
@@ -17,7 +19,6 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      binding.pry
       redirect_to articles_path
     else
       render :new, status: :unprocessable_entity

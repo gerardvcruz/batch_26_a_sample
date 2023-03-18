@@ -19,4 +19,12 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+
+  resources :categories
+
+  get '/signin' => 'auth#signin'
+  get '/signup' => 'auth#signup'
+  post '/signin' => 'auth#new_session'
+  post '/signup' => 'auth#new_account'
+  delete '/logout' => 'auth#logout'
 end
