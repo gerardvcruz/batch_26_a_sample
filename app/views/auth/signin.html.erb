@@ -1,7 +1,16 @@
 <%= form_with(scope: :user, url: signin_path, local: true) do |form| %>
-  <%= form.label "Email" %>
-  <%= form.text_field  :email %>
-  <%= form.label "Password" %>
-  <%= form.password_field :password %>
+  <p>
+    <%= form.label "Email" %>
+    <%= form.text_field  :email %>
+  </p>
+  <p>
+    <%= form.label "Password" %>
+    <%= form.password_field :password %>
+  </p>
+
+  <p>
+    <%= link_to('Reset Password', reset_password_path) %>
+  </p>
+
   <%= form.submit "Sign In" %>
 <% end %>

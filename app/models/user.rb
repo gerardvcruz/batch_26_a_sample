@@ -28,4 +28,7 @@ class User < ApplicationRecord
 
     self.save
   end
+
+  def self.reset_password
+  end
 end

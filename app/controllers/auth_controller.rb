@@ -28,6 +28,17 @@ class AuthController < ApplicationController
     end
   end
 
+  def reset_password
+    if user = User.find_by_email(params[:email])
+      user.generate_password_reset_token
+      user.send_reset_password_email
+
+      render json: { success: true }, status: 200
+    end
+
+
+  end
+
   def logout
     
   end

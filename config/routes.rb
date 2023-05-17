@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   get '/signup' => 'auth#signup'
   post '/signin' => 'auth#new_session'
   post '/signup' => 'auth#new_account'
+  get '/reset_password' => 'auth#reset_password'
   delete '/logout' => 'auth#logout'
 end
