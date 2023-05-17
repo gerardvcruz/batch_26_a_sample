@@ -1,14 +1,20 @@
 class RiceController < ApplicationController
   before_action :set_rice, only: %i[ show edit update destroy ]
 
+  include ActiveStorage::SetCurrent
+
   # GET /rice or /rice.json
   def index
     @rice = Rice.all
+
   end
 
   # GET /rice/1 or /rice/1.json
   def show
     # @rice that is accessible in our view...
+    render json: @rice.as_json.merge({
+      brand_pic_urls: @rice.brand_pics.map(&:url)
+    })
   end
 
   # GET /rice/new
@@ -66,6 +72,6 @@ class RiceController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rice_params
-      params.require(:rice).permit(:kg, :brand, :price)
+      params.require(:rice).permit(:kg, :brand, :price, brand_pics: [])
     end
 end

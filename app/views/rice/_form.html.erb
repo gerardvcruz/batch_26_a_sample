@@ -27,6 +27,12 @@
   </div>
 
   <div>
+    <%= form.label :brand_pic, style: "display: block" %>
+    <%= form.file_field :brand_pics, multiple: true %>
+    <%= form.file_field :brand_pics, multiple: true %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
